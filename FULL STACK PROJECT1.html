@@ -1,0 +1,423 @@
+BASIC WEB PAGE:
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-image: url(./wp7504249-minimal-wave-laptop-wallpapers.jpg);
+            background-size: cover;
+        }
+
+        h1 {
+            color: black;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 60px;
+        }
+
+        header {
+
+            color: black;
+            padding: 1rem;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        footer {
+            color: black;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        img {
+            max-width: 30%;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Coffee Heaven</h1>
+    <header>
+            <nav class="links-container">
+                <ul>
+                    <li><a style="color: rgb(13, 12, 12);" href="About us.html">Menu</a></li>
+                    <li><a style="color: rgb(6, 6, 6);" href="Layout.html">About Us</a></li>
+                    <li><a style="color: rgb(8, 7, 7);" href="https://goo.gl/maps/D9fdv67WnwJBwuUH7">Location</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <section>
+            <p>At Coffee Heaven, we offer a wide range of coffee and tea beverages, as well as delicious pastries and
+                snacks. <br>
+                Whether you're looking for a rich espresso, a refreshing iced tea, or a sweet treat to accompany
+                your drink, we've got you covered.<br>
+                A coffeehouse, coffee shop, or café is an establishment that primarily serves various types of coffee,
+                notably espresso, latte, and cappuccino.<br>
+                In our coffee heaven we serve cold drinks, iced coffee and iced tea, as well as other non-caffeinated
+                beverages.</p>
+        </section>
+
+
+
+        </section>
+    </main><br><br><br><br>
+
+    <footer>
+        Contact us at : <a style="color:black;" href="mailto:thushyanth2004@gmail.com">thushyanth2004@gmail.com</a><br><br>
+        <a href="https://www.instagram.com/"><img src="C:\Users\abish\Downloads\download.jpeg"
+                style="width:45px;height:45px"></a>
+        <a href="https://twitter.com/i/flow/login"><img src="C:\Users\abish\Downloads\logo (1).png"
+                style="width:45px;height:45px"></a>
+        <a href=https://www.facebook.com /><img src="C:\Users\abish\Downloads\facebook.png"
+            style="width:45px;height:45px"></a>
+    </footer>
+</body>
+
+</html>
+
+
+
+
+
+INDEX:
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-image: url(./wp4717526-vintage-autumn-colors-wallpapers.jpg);
+            background-size: cover;
+            text-align: center;
+            color: white;
+        }
+
+        form {
+            font-size: 1.6rem;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 style="color: rgb(243, 240, 240); font-size: 50px;">Login</h1>
+    </div>
+    <center>
+        <form action="Basic Web Page.html" id="membershipForm" onsubmit="return validateForm()">
+            <table>
+                <tr>
+                    <td><label for="UserName">User Name:</label></td>
+                    <td><input type="text" id="UserName" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" minlength="6" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">DOB:</label> </td>
+                    <td><input type="date" id="dob"></td>
+                </tr>
+                <tr>
+                    <td><label for="country">Country:</label></td>
+                    <td><select id="country" required>
+                            <option value="">Select your country</option>
+                            <option value="usa">India</option>
+                            <option value="uk">UK</option>
+                            <option value="canada">Dubai</option>
+                            <option value="usa">USA</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label>Preferred :</label></td>
+                    <td><select id="Coffee">
+                            <option value="">Coffee</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit"></td>
+                    <td> <input type="reset" value="Reset"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+
+    <script>
+        function validateForm() {
+            const fullNameInput = document.getElementById("fullName");
+            const emailInput = document.getElementById("email");
+            const passwordInput = document.getElementById("password");
+
+            if (fullNameInput.value.trim() === "") {
+                alert("Please enter your full name.");
+                return false;
+            }
+
+            if (emailInput.value.trim() === "") {
+                alert("Please enter your email address.");
+                return false;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (passwordInput.value.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+LAYOUT:
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(./279561.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        header,
+        footer {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        header h1,
+        footer p {
+            margin: 0;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2rem;
+        }
+
+        .column {
+            flex-basis: 30%;
+            max-width: 300px;
+            margin: 1rem;
+            background-color: #f5f5f5;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .column {
+                flex-basis: 45%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .column {
+                flex-basis: 100%;
+            }
+        }
+
+        .left {
+            border: 1px;
+            padding: 3px;
+            margin-top: -70px;
+            text-align: left;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <h1>ABOUT US</h1>
+    </header><br><br><br><br><br><br>
+    <div class="left">
+        <button>
+            <a href="D:\Project\Basic Web Page.html">Home</a>
+        </button>
+    </div>
+    <main>
+        <div class="column">
+            <h2>Our Mission</h2>
+            <p>To provide our customers the world's best freshly roasted coffees with excellent service at a price that
+                is fair to the producers and our customers. Our commitment to best practices towards customer service,
+                our employees, the environment and our community defines the Freshly Roasted Coffee.</p>
+        </div>
+
+        <div class="column">
+            <h2>Our Vision</h2>
+            <p>To be the most loved & respected coffee company worldwide. We are tireless in our pursuit to serve the
+                highest quality coffee, while making each and every one of our guests feel like they are returning home
+                when they step into one of our coffee houses.</p>
+        </div>
+
+        <div class="column">
+            <h2>Discover</h2>
+            <p>Coffee Haven was founded in 2004 with a passion for providing the best coffee experience to our
+                customers. We source our beans from the finest coffee-growing regions and meticulously craft each cup to
+                perfection.</p>
+        </div>
+
+    </main>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="footer">
+
+        <footer>
+
+
+            Contact us at : <a style="color: gray;" href="mailto:abishekgr04@gmail.com">abishekgr04@gmail.com</a>
+
+
+
+        </footer>
+    </div>
+</body>
+
+</html>
+
+
+
+
+ABOUT:
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-image: url(./wp8744612-coffee-desktop-wallpapers.jpg);
+        background-size: cover;
+    }
+
+    p {
+        background-color: rgb(68, 72, 75);
+        font-size: x-large;
+    }
+
+    a,
+    menu {
+        font-size: 35px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .cen {
+        border: 0px solid whitesmoke;
+        text-align: center;
+    }
+
+    button {
+        background-color: rgb(253, 253, 251);
+        color: black;
+        border-radius: 2px;
+        padding: 1px;
+        margin: 1px;
+    }
+
+    button a {
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+
+    }
+</style>
+
+<body>
+    <div>
+        <button><a href="D:\Project\Basic Web Page.html">Home</a></button>
+    </div>
+    <h1 style="font-size: 80px; text-align: center; color:  white; font-family:cursive;">Menu</h1>
+    <div class="menu">
+        <div class="cen">
+            <a href="https://en.wikipedia.org/wiki/Espresso">Espresso</a><br><br>
+            <a href="https://en.wikipedia.org/wiki/Cappuccino">Cappuccino</a><br><br>
+            <a href="https://en.wikipedia.org/wiki/Latte">Latte</a><br><br>
+            <a href="https://www.vegrecipesofindia.com/cold-coffee-recipe-coffee-milkshake/">Cold Coffee</a><br><br>
+            <a href="https://www.healthline.com/nutrition/is-hot-tea-good-for-you">Hot Tea</a><br><br>
+            <a href="https://en.wikipedia.org/wiki/Caff%C3%A8_mocha">Mocha</a><br><br>
+        </div>
+        <center><a style="font-family:cursive; color:burlywood;"
+                href="https://www.thirdwavecoffeeroasters.com/blogs/blog/15-most-popular-types-of-coffee-drinks">More</a>
+        </center>
+
+    </div>
+
+</body>
+
+</html>
